@@ -3,6 +3,9 @@ package com.pigfly.sell.dao;
 import com.pigfly.sell.entity.ProductCategory;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ProductCategoryDao extends JpaRepository<ProductCategory,Integer> {
+import java.util.List;
 
+
+public interface ProductCategoryDao extends JpaRepository<ProductCategory,Integer> {
+    List<ProductCategory> findByCategoryTypeIn(List<Integer> categoryTypeList);
 }
