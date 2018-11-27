@@ -2,7 +2,10 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: qwe123
-    url: jdbc:mysql://192.168.138.143:3306/sell?characterEncoding=utf-8&useSSL=false
+    #password: qwe123
+    password: root
+    #url: jdbc:mysql://192.168.138.143:3306/sell?characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/sell?characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
   jpa:
     show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect

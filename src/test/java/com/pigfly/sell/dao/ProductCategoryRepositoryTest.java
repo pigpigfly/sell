@@ -7,16 +7,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ProductCategoryDaoTest {
+public class ProductCategoryRepositoryTest {
     @Autowired
-    private ProductCategoryDao productCategoryDao;
+    private ProductCategoryRepository productCategoryRepository;
 
     @Test
     public void testFind(){
-        ProductCategory productCategory = productCategoryDao.findById(1).get();
+        ProductCategory productCategory = productCategoryRepository.findById(1).get();
 
         System.out.println(productCategory);
     }
@@ -24,16 +23,17 @@ public class ProductCategoryDaoTest {
     @Test
     public void testSave(){
         ProductCategory productCategory = new ProductCategory();
-        productCategory.setCategoryName("女生最爱");
-        productCategory.setCategoryType(10);
-        productCategoryDao.save(productCategory);
+        productCategory.setCategoryName("最热榜");
+        productCategory.setCategoryType(2);
+        productCategoryRepository.save(productCategory);
     }
 
     @Test
     public void testUpdate(){
         ProductCategory productCategory = new ProductCategory();
-        productCategory.setCategoryId(2);
+        productCategory.setCategoryId(9);
         productCategory.setCategoryName("男生最爱");
-        productCategoryDao.save(productCategory);
+        productCategory.setCategoryType(11);
+        productCategoryRepository.save(productCategory);
     }
 }

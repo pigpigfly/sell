@@ -1,6 +1,6 @@
 package com.pigfly.sell.service.impl;
 
-import com.pigfly.sell.dao.ProductCategoryDao;
+import com.pigfly.sell.dao.ProductCategoryRepository;
 import com.pigfly.sell.entity.ProductCategory;
 import com.pigfly.sell.service.ProductCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,25 +17,25 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
      * 引入DAO
      */
     @Autowired
-    private ProductCategoryDao productCategoryDao;
+    private ProductCategoryRepository productCategoryRepository;
 
     @Override
     public ProductCategory findOne(Integer categoryId) {
-        return productCategoryDao.findById(categoryId).get();
+        return productCategoryRepository.findById(categoryId).get();
     }
 
     @Override
     public List<ProductCategory> findAll() {
-        return productCategoryDao.findAll();
+        return productCategoryRepository.findAll();
     }
 
     @Override
     public List<ProductCategory> findByCategoryTypeIn(List<Integer> categoryTypelist) {
-        return productCategoryDao.findByCategoryTypeIn(categoryTypelist);
+        return productCategoryRepository.findByCategoryTypeIn(categoryTypelist);
     }
 
     @Override
     public ProductCategory save(ProductCategory productCategory) {
-        return productCategoryDao.save(productCategory);
+        return productCategoryRepository.save(productCategory);
     }
 }

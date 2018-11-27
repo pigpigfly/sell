@@ -1,5 +1,7 @@
 package com.pigfly.sell.entity;
 
+import org.hibernate.annotations.DynamicUpdate;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -16,10 +18,6 @@ public class ProductCategory {
    private String categoryName;
     /** 类目编号 */
    private Integer categoryType;
-    /** 创建日期 */
-   private Date createTime;
-    /** 更新日期 */
-   private Date updateTime;
 
     public Integer getCategoryId() {
         return categoryId;
@@ -45,21 +43,6 @@ public class ProductCategory {
         this.categoryType = categoryType;
     }
 
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
-    }
     /** 无参构造函数 */
     public ProductCategory() {
     }
