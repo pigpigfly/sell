@@ -15,15 +15,17 @@ public class ProductCategoryServiceImplTest {
     @Test
     public void findOne() {
 
-        System.out.println(productCategoryServiceImpl.findOne(1));
+        System.out.println(productCategoryServiceImpl.findOne(9));
     }
 
     @Test
     public void findAll() {
+        System.out.println(productCategoryServiceImpl.findAll());
     }
 
     @Test
     public void findByCategoryTypeIn() {
+
     }
 
     @Test

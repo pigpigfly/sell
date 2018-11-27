@@ -7,24 +7,40 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Arrays;
+import java.util.List;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ProductCategoryRepositoryTest {
+
     @Autowired
     private ProductCategoryRepository productCategoryRepository;
 
     @Test
     public void testFind(){
-        ProductCategory productCategory = productCategoryRepository.findById(1).get();
+        ProductCategory productCategory = productCategoryRepository.findById(9).get();
 
         System.out.println(productCategory);
     }
 
     @Test
+    public void testFindByCategoryTypeIn(){
+        List<Integer> lists = Arrays.asList(11,2);
+        List<ProductCategory> result =  productCategoryRepository.findByCategoryTypeIn(lists);
+        for(ProductCategory pc : result){
+            System.out.println("id"+pc.getCategoryId());
+            System.out.println("name"+pc.getCategoryName());
+            System.out.println("type"+pc.getCategoryType());
+
+        }
+    }
+
+    @Test
     public void testSave(){
         ProductCategory productCategory = new ProductCategory();
-        productCategory.setCategoryName("最热榜");
-        productCategory.setCategoryType(2);
+        productCategory.setCategoryName("女生最爱");
+        productCategory.setCategoryType(22);
         productCategoryRepository.save(productCategory);
     }
 

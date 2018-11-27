@@ -3,12 +3,14 @@ package com.pigfly.sell.entity;
 import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.Date;
 
 /**
  *  类目
  */
 @Entity
+@DynamicUpdate
 public class ProductCategory {
     /** 类目id */
     @Id
@@ -18,6 +20,8 @@ public class ProductCategory {
    private String categoryName;
     /** 类目编号 */
    private Integer categoryType;
+
+
 
     public Integer getCategoryId() {
         return categoryId;
@@ -42,6 +46,7 @@ public class ProductCategory {
     public void setCategoryType(Integer categoryType) {
         this.categoryType = categoryType;
     }
+
 
     /** 无参构造函数 */
     public ProductCategory() {
