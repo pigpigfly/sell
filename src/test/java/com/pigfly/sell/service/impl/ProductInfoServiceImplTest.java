@@ -1,6 +1,7 @@
 package com.pigfly.sell.service.impl;
 
 import com.pigfly.sell.entity.ProductInfo;
+import com.pigfly.sell.enums.ProductStatusEnum;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
@@ -19,12 +21,13 @@ public class ProductInfoServiceImplTest {
 
     @Test
     public void findOne() {
-
+       ProductInfo  p = productInfoServiceImpl.findOne("12345678");
+       System.out.println(p.toString());
     }
 
     @Test
     public void findUpAll() {
-
+        List<ProductInfo> p = productInfoServiceImpl.findUpAll();
     }
 
     @Test

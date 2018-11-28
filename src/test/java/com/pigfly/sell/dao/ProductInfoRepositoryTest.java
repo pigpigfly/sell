@@ -18,6 +18,7 @@ public class ProductInfoRepositoryTest {
 
     @Test
     public void findByProductInfoStatus() {
+
     }
 
     @Test
