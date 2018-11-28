@@ -27,4 +27,11 @@ public class ProductInfoServiceImpl implements ProductInfoService {
     public List<ProductInfo> findAll(Pageable pageable) {
         return null;
     }
+
+    @Override
+    public ProductInfo save(ProductInfo productInfo) {
+
+        return repository.save(productInfo);
+    }
+
 }

@@ -39,8 +39,8 @@ public class ProductCategoryRepositoryTest {
     @Test
     public void testSave(){
         ProductCategory productCategory = new ProductCategory();
-        productCategory.setCategoryName("女生最爱");
-        productCategory.setCategoryType(22);
+        productCategory.setCategoryName("情侣套餐");
+        productCategory.setCategoryType(32);
         productCategoryRepository.save(productCategory);
     }
 

@@ -2,10 +2,7 @@ package com.pigfly.sell.entity;
 
 import org.hibernate.annotations.DynamicUpdate;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 
 /**
@@ -16,21 +13,28 @@ import java.math.BigDecimal;
 public class ProductInfo {
     /**商品id */
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="product_id")
     private String productId;
     /**商品名称*/
+    @Column(name="product_name")
     private String productName;
     /**商品价格*/
+    @Column(name="product_price")
     private BigDecimal productPrice;
     /**商品库存*/
+    @Column(name="product_stock")
     private Integer productStock;
     /**商品描述*/
+    @Column(name="product_description")
     private String productDescription;
     /**商品图片*/
+    @Column(name="product_icon")
     private String productIcon;
     /**类目编号*/
+    @Column(name="category_type")
     private Integer categoryType;
     /**商品状态，0 正常 1 下架*/
+    @Column(name="product_status")
     private Integer productStatus;
     public String getProductId() {
         return productId;

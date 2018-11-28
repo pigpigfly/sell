@@ -29,4 +29,5 @@ public interface ProductInfoService {
     /**
      *加库存、减库存
      */
+    ProductInfo save(ProductInfo productInfo);
 }
