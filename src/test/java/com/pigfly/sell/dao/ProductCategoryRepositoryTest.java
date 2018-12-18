@@ -26,12 +26,12 @@ public class ProductCategoryRepositoryTest {
 
     @Test
     public void testFindByCategoryTypeIn(){
-        List<Integer> lists = Arrays.asList(11,2);
+        List<Integer> lists = Arrays.asList(11,2,32);
         List<ProductCategory> result =  productCategoryRepository.findByCategoryTypeIn(lists);
         for(ProductCategory pc : result){
-            System.out.println("id"+pc.getCategoryId());
-            System.out.println("name"+pc.getCategoryName());
-            System.out.println("type"+pc.getCategoryType());
+            System.out.println("id："+pc.getCategoryId());
+            System.out.println("name："+pc.getCategoryName());
+            System.out.println("type："+pc.getCategoryType());
 
         }
     }
