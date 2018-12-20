@@ -24,7 +24,7 @@ public interface ProductCategoryService{
      * @param categoryType
      * @return
      */
-    List<ProductCategory> findByCategoryTypeIn(List<Integer> categoryType);
+    List<ProductCategory>  findByCategoryTypeIn(List<Integer> categoryType);
 
     /**
      * 保存类目信息

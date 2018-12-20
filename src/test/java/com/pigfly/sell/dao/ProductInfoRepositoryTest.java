@@ -24,13 +24,13 @@ public class ProductInfoRepositoryTest {
     @Test
     public void save(){
         ProductInfo productInfo = new ProductInfo();
-        productInfo.setProductId("12345678");
-        productInfo.setProductName("皮蛋瘦肉粥");
-        productInfo.setProductPrice(new BigDecimal(12.3));
-        productInfo.setProductStock(100);
-        productInfo.setProductDescription("美味的粥");
+        productInfo.setProductId("12845574");
+        productInfo.setProductName("蛋炒饭");
+        productInfo.setProductPrice(new BigDecimal(18.3));
+        productInfo.setProductStock(200);
+        productInfo.setProductDescription("美味的蛋炒饭");
         productInfo.setProductIcon("http://xxxxx.jpg");
-        productInfo.setCategoryType(11);
+        productInfo.setCategoryType(2);
         productInfo.setProductStatus(0);
 
         ProductInfo productInfo1 = repository.save(productInfo);
